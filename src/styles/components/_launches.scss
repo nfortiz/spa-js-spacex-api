@@ -1,0 +1,48 @@
+#timer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: rgb(27, 27, 27);
+}
+
+.timer {
+    text-align: center;
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__value {
+        font-weight: 800;
+        font-size: #{nth($font-sizes, 6)}px;
+    }
+}
+
+.launch {
+    background-color: rgba(32, 32, 32, 0.719);
+    padding: 10px 20px;
+
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        p {
+            width: 100%;
+            
+            &::after {
+                content: '_';
+                display: block;
+                height: 20px;
+            }
+        }
+
+        &--item {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            flex-shrink: 1;
+            color: $color-text;
+            font-family: $font-body;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+    min-width: 900px;
+    
+    .row {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(12, 1fr);
+     
+        @for $i from 1 through 12 {
+            .col-#{$i} {
+                grid-column-end: span #{$i}
+            }
+        }
+       
+    }
+}

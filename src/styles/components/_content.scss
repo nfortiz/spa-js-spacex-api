@@ -1,0 +1,13 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $color-background;
+}
+
+#content {
+    margin-top: 100px;
+    height: auto;
+}

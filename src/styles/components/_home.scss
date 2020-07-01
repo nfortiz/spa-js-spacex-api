@@ -1,0 +1,17 @@
+.hero {
+    width: 100%;
+    height: calc(100vh - 170px);
+    background-image: url(https://images.unsplash.com/photo-1530183779930-e5cb23103c3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+
+    a {
+        font-size: inherit;
+    }
+}
