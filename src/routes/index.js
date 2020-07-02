@@ -2,15 +2,18 @@ import Header from '../templates/Header';
 import Footer from '../templates/Footer'
 
 import Home from '../pages/Home';
-import Launches from '../pages/Launches'
-import Error404 from '../pages/Error404'
+import Launches from '../pages/Launches';
+import Rockets from '../pages/Rockets';
+import About from '../pages/About';
+import Error404 from '../pages/Error404';
 
 import getHash from '../utils/getHash';
-import resolveRoute from '../utils/resolveRoute'
+import resolveRoute from '../utils/resolveRoute';
 
 const routes = {
     '/': Home,
-    '/launches': Launches
+    '/launches': Launches,
+    '/rockets': Rockets,
 };
 
 async function router() {

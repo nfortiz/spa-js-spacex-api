@@ -4,6 +4,7 @@ function Header() {
             <ul>
                 <li><a href='#/'>Home</a></li>
                 <li><a href='#/launches'>Launches</a></li>
+                <li><a href='#/rockets'>Rockets</a></li>
                 <li><a href='/'>About Me</a></li>
             </ul>
         </nav>

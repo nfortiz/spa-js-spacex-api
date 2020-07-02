@@ -35,10 +35,11 @@ async function Launches() {
             <div class='row'>
             <h2 class='col-12'>Launches</h2>
             ${launches.map((launch) => {
+                const details = launch.details ? launch.details : 'Description not available';
                 return `<article class='col-4 launch'>
                     <h3>${launch.mission_name}</h3>
                     <div class='launch__description'>
-                        <p class='launch__description--item'>${launch.details}</p>
+                        <p class='launch__description--item'>${details}</p>
                         <span class='launch__description--item'>🚀Rocket: ${launch.rocket.rocket_name}</span>
                         <span class='launch__description--item'>⌚Launch Year: ${launch.launch_year}</span>
                         <span class='launch__description--item'>🤖Flight Number: ${launch.flight_number}</span>
