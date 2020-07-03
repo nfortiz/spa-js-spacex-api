@@ -24,7 +24,10 @@ function carousel(idCarousel) {
     }
 
     const content = document.getElementById('content');
-    content.addEventListener('click', (evt) => moveSlides(idCarousel, evt));
+    const slideEvent = (evt) => moveSlides(idCarousel, evt);
+    content.addEventListener('click', slideEvent);
+
+    return () => content.removeEventListener('click', slideEvent);
 }
     
 

@@ -16,6 +16,8 @@ const routes = {
     '/rockets': Rockets,
 };
 
+let currentRoute;
+
 async function router() {
 
     const header = document.getElementById('header');
@@ -25,10 +27,15 @@ async function router() {
     header.innerHTML = Header();
     footer.innerHTML = Footer();
 
+    if(currentRoute) {
+        currentRoute.unMount && currentRoute.unMount();
+    }
+
     const hash = getHash();
     const route = resolveRoute(hash);
     const render = routes[route] ? routes[route] : Error404;
 
+    currentRoute = render;
     content.innerHTML = await render();
 }
 

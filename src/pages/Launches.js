@@ -5,7 +5,7 @@ async function Launches() {
     const nextMission = await getNextLaunch();
     const endDate = new Date(nextMission.launch_date_utc).getTime();
 
-    setInterval(() => {
+    const idInterval = setInterval(() => {
         const now = new Date().getTime();
         let time = endDate - now;
         const timer = document.getElementById('timer-container');
@@ -24,6 +24,9 @@ async function Launches() {
     }, 1000);
 
     const launches = await getLaunches();
+
+    Launches.unMount = () => clearInterval(idInterval);
+
     return `
         <aside class='container'>
             <div class='row'>
