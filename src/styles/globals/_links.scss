@@ -4,6 +4,9 @@ a {
     transition: 600ms;
     color: $color-secondary;
     font-size: #{nth($font-sizes, 3)}px;
+    transition: text-decoration 500ms;
+    text-shadow: 1px 1px black;
+
     &:hover {
         text-decoration: underline;
     }

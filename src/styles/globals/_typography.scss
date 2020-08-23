@@ -12,11 +12,21 @@
     h#{$i} {
         @extend %heading;
         font-size: #{nth($font-sizes, 7 - $i)}px;
+
+        &::selection {
+            color: $color-background;
+            background-color: $color-text;
+        }
     }
 }
 
 p, li, ul, ol, input, span {
     @extend %body;
     font-size: #{nth($font-sizes, 3)}px;
+
+    &::selection {
+        color: $color-background;
+        background-color: $color-text;
+    }
 }
 

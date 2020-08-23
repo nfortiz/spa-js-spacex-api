@@ -4,7 +4,6 @@ import Footer from '../templates/Footer'
 import Home from '../pages/Home';
 import Launches from '../pages/Launches';
 import Rockets from '../pages/Rockets';
-import About from '../pages/About';
 import Error404 from '../pages/Error404';
 
 import getHash from '../utils/getHash';
@@ -25,6 +24,7 @@ async function router() {
     const footer = document.getElementById('footer');
 
     header.innerHTML = Header();
+    Header.didMount();
     footer.innerHTML = Footer();
 
     if(currentRoute) {
@@ -37,6 +37,8 @@ async function router() {
 
     currentRoute = render;
     content.innerHTML = await render();
+
+    currentRoute.didMount && currentRoute.didMount();
 }
 
 export default router;

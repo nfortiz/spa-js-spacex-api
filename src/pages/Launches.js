@@ -34,7 +34,7 @@ async function Launches() {
                 <div class='col-12' id='timer-container'></div>
             </div>
         </aside>
-        <section class='container'>
+        <section class='container launches'>
             <div class='row'>
             <h2 class='col-12'>Launches</h2>
             ${launches.map((launch) => {

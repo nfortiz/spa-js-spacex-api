@@ -3,11 +3,11 @@ import carousel from '../utils/carousel';
 
 async function Rockets() {
 
-    const carouselDelete = carousel('rockets');
+    const removeEvents = carousel('rockets');
     
     const rockets = await getRockets();
 
-    Rockets.unMount = () => carouselDelete();
+    Rockets.unMount = () => removeEvents();
 
     return `
         <div class='container'>
